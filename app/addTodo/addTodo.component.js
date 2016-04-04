@@ -27,7 +27,8 @@ System.register(['angular2/core', '../showTodo/showTodo.component'], function(ex
                 }
                 addTodo.prototype.addTodo = function (val1, val2) {
                     this.todos.push({ title: val1.value, desc: val2.value });
-                    console.log(this.todos);
+                    val1.value = "";
+                    val2.value = "";
                 };
                 addTodo = __decorate([
                     core_1.Component({

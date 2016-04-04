@@ -8,8 +8,7 @@ import {showTodo} from './showTodo/showTodo.component'
     directives: [navBar, addTodo, showTodo],
     template: `
                 <nav-bar></nav-bar>
-                <add-todo></add-todo>
-               
+                <add-todo></add-todo>           
 `
 })
 

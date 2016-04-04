@@ -34,7 +34,7 @@ System.register(['angular2/core', './navbar/nav.component', './addTodo/addTodo.c
                     core_1.Component({
                         selector: 'my-app',
                         directives: [nav_component_1.navBar, addTodo_component_1.addTodo, showTodo_component_1.showTodo],
-                        template: "\n                <nav-bar></nav-bar>\n                <add-todo></add-todo>\n               \n"
+                        template: "\n                <nav-bar></nav-bar>\n                <add-todo></add-todo>           \n"
                     }), 
                     __metadata('design:paramtypes', [])
                 ], mainComponent);

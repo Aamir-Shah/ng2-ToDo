@@ -1,1 +1,29 @@
-<hr>
+<hr style="height: 1px;">
+
+
+<ul style="list-style-position:inside; list-style-type:decimal-leading-zero;">
+    <li *ngFor='#item of todo'>
+
+        <div class="card">
+
+            <div class="card-header" style="line-height:27px;">
+                {{item.title}}
+
+                <span style="float: right;">
+                <button type="button" class="btn btn-success fa-lg"><i class="fa fa-check"></i></button> 
+                <button type="button" class="btn btn-success fa-lg"><i class="fa fa-check"></i></button> 
+                <button type="button" class="btn btn-success fa-lg"><i class="fa fa-check"></i></button> 
+                </span>
+            </div>
+
+            <div class="card-block">
+                <blockquote class="card-blockquote">
+                    <p>{{item.desc}}</p>
+                    <footer style="color: grey; font-size: 12px;">Added on: Sunday 23, 2016</footer>
+                </blockquote>
+            </div>
+
+        </div>
+
+    </li>
+</ul>

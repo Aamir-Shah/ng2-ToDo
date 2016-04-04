@@ -14,7 +14,7 @@ export class addTodo {
 
     addTodo(val1: HTMLInputElement, val2: HTMLInputElement) {
         this.todos.push({ title: val1.value, desc: val2.value });
-
-        console.log(this.todos)
+        val1.value = "";
+        val2.value = "";
     }
 }
