@@ -1,4 +1,4 @@
-System.register(['angular2/core', './navbar/nav.component', './addTodo/addTodo.component', './showTodo/showTodo.component'], function(exports_1, context_1) {
+System.register(['angular2/core', '../showTodo/showTodo.component'], function(exports_1, context_1) {
     "use strict";
     var __moduleName = context_1 && context_1.id;
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -10,38 +10,37 @@ System.register(['angular2/core', './navbar/nav.component', './addTodo/addTodo.c
     var __metadata = (this && this.__metadata) || function (k, v) {
         if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
     };
-    var core_1, nav_component_1, addTodo_component_1, showTodo_component_1;
-    var mainComponent;
+    var core_1, showTodo_component_1;
+    var addTodo;
     return {
         setters:[
             function (core_1_1) {
                 core_1 = core_1_1;
             },
-            function (nav_component_1_1) {
-                nav_component_1 = nav_component_1_1;
-            },
-            function (addTodo_component_1_1) {
-                addTodo_component_1 = addTodo_component_1_1;
-            },
             function (showTodo_component_1_1) {
                 showTodo_component_1 = showTodo_component_1_1;
             }],
         execute: function() {
-            mainComponent = (function () {
-                function mainComponent() {
+            addTodo = (function () {
+                function addTodo() {
+                    this.todos = [];
                 }
-                mainComponent = __decorate([
+                addTodo.prototype.addTodo = function (val1, val2) {
+                    this.todos.push({ title: val1.value, desc: val2.value });
+                    console.log(this.todos);
+                };
+                addTodo = __decorate([
                     core_1.Component({
-                        selector: 'my-app',
-                        directives: [nav_component_1.navBar, addTodo_component_1.addTodo, showTodo_component_1.showTodo],
-                        template: "\n                <nav-bar></nav-bar>\n                <add-todo></add-todo>\n               \n"
+                        selector: 'add-todo',
+                        directives: [showTodo_component_1.showTodo],
+                        templateUrl: 'app/addTodo/addTodo.html'
                     }), 
                     __metadata('design:paramtypes', [])
-                ], mainComponent);
-                return mainComponent;
+                ], addTodo);
+                return addTodo;
             }());
-            exports_1("mainComponent", mainComponent);
+            exports_1("addTodo", addTodo);
         }
     }
 });
-//# sourceMappingURL=main.component.js.map
+//# sourceMappingURL=addTodo.component.js.map

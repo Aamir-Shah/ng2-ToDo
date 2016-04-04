@@ -1,0 +1,15 @@
+<div class="card card-block text-xs-center" style="width: 70%; margin:0 auto;margin-top:5%;">
+
+    <h3 class="card-title">Add your Todo Here !</h3>
+
+    <fieldset class="form-group">
+        <input class="form-control form-control-lg" type="text" placeholder="Title" #title>
+    </fieldset>
+
+    <fieldset class="form-group">
+        <input class="form-control form-control-lg" type="text" placeholder="Description" #description>
+    </fieldset>
+
+    <a (click)="addTodo(title, description)" class="btn btn-primary">ADD</a>
+
+</div>
